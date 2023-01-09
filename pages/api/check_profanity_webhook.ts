@@ -25,7 +25,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     
     if (!isValidRequest) {
       console.log("request: " + isValidRequest)
-      console.log(notification)
+      console.log(notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step")
+      console.log("messaage")
+      console.log(notification.message)
+      console.log("operation")
+      console.log(notification.message.operation)
+      console.log("change")
+      console.log(notification.message.operation === "change_workflow_step")
       res.status(400).end()
       return
     }
