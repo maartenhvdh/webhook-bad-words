@@ -6,8 +6,8 @@ import { BasicPage } from "../models/content-types/basic_page"
 const sourceTrackingHeaderName = 'X-KC-SOURCE'
 
 const client = createDeliveryClient({
-  projectId: process.env.KONTENT_PROJECT_ID,
-  previewApiKey: process.env.PREVIEW_API_KEY,
+  projectId: process.env.NEXT_PUBLIC_KONTENT_PROJECT_ID,
+  previewApiKey: process.env.NEXT_PUBLIC_KONTENT_PREVIEW_API_KEY,
   defaultQueryConfig: {
     usePreviewMode: true
   },

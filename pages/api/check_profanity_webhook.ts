@@ -19,10 +19,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Cast the request body as a structured data object
     const notification = req.body as WebhookNotification
 
+    console.log("notification" + notification)
     // Check that this request is based on a changed workflow step from the CMS - otherwise abort
     const isValidRequest = notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step"
     
     if (!isValidRequest) {
+      console.log("request: " + isValidRequest)
+      console.log(notification)
       res.status(400).end()
       return
     }
@@ -83,8 +86,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
           // Initialise management API client            
           const managementClient = new ManagementClient({
-            projectId: process.env.KONTENT_PROJECT_ID,
-            apiKey: process.env.MANAGEMENT_API_KEY,
+            projectId: process.env.NEXT_PUBLIC_KONTENT_PROJECT_ID,
+            apiKey: process.env.NEXT_PUBLIC_KONTENT_MANAGEMENT_API_KEY,
           });
 
           if(isBad == 'true')
