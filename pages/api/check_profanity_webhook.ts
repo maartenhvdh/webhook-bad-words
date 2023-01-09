@@ -22,7 +22,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log("notification" + notification)
     // Check that this request is based on a changed workflow step from the CMS - otherwise abort
     const isValidRequest = notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step"
-    
+    console.log(notification.data)
+    console.log(notification.message)
     if (!isValidRequest) {
       console.log("request: " + isValidRequest)
       console.log(notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step")
