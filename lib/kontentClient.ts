@@ -23,7 +23,7 @@ const client = createDeliveryClient({
 export async function getBasicPageItemById(itemId) : Promise<BasicPage[]> {
   const response = await client
     .items<BasicPage>()
-    .type('basic_page')
+    .type('_bad_words')
     .equalsFilter('system.id', itemId)
     .toPromise();
 
