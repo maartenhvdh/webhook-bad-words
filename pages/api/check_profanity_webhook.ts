@@ -19,21 +19,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Cast the request body as a structured data object
     const notification = req.body as WebhookNotification
 
-    console.log("notification" + notification)
     // Check that this request is based on a changed workflow step from the CMS - otherwise abort
     const isValidRequest = notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step"
-    console.log(notification)
-    console.log(notification.data)
-    console.log(notification.message)
+
     if (!isValidRequest) {
-      console.log("request: " + isValidRequest)
-      console.log(notification && notification.message && notification.message.operation && notification.message.operation === "change_workflow_step")
-      console.log("messaage")
-      console.log(notification.message)
-      console.log("operation")
-      console.log(notification.message.operation)
-      console.log("change")
-      console.log(notification.message.operation === "change_workflow_step")
       res.status(400).end()
       return
     }
