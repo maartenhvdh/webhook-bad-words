@@ -1,0 +1,417 @@
+/*
+  START Reset.css 
+  http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END Reset.css */
+
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #EEE;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.layout {
+    margin: auto;
+  background-color: f3f3f3;
+}
+
+h1 {
+  font-size: 34px;
+  padding: 0 0 16px;
+}
+
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 34px;
+    padding: 0 0 18px;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  h1 {
+
+    font-size: 34px;
+    padding: 0 0 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+
+    font-size: 34px;
+    padding: 0 0 36px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  padding: 24px 0 24px 0;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 24px 0 24px 0;
+}
+
+a {
+  color: #F05A22;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: #CC4C1C;
+}
+
+.append-dot:after {
+  content: ".";
+  color: #F05A22;
+}
+
+
+.button {
+  margin: 2em 1em;
+}
+
+.button a {
+  background-color: #B72929;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  transition-property: color, background-color;
+}
+
+.button a:hover {
+  color: #B72929;
+  background-color: #FFFFFF;
+}
+
+p {
+  padding: 10px 0 0 0;
+  line-height: 20px;
+}
+
+/* Master layout */
+
+
+/* Home listing page */
+
+#home-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 0 50px 0;
+}
+
+.clear {
+  clear:both;
+}
+
+li.list-teaser-item {
+  width: 950px;
+  height: 80px;
+  padding: 20px 0 0 50px;
+  background-color: #FFFFFF;
+  margin: 0 0 20px 0;
+  color: #007099;
+  font-size: 26px;
+}
+
+li.list-teaser-item a
+{
+  color: #007099 !important;  
+}
+
+li.list-teaser-item:hover {
+  background-color: #DDDDDD;
+  cursor: pointer !important;
+}
+
+.list-teaser-item-top {
+  font-size: 18px;
+  color: #333333;
+}
+
+.list-teaser-item-top div {
+  float: left;
+  margin : 0 25px 15px 0;
+}
+
+/* Master layout */
+
+#main-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#main-header {
+  width: 1200px;
+  height: 470px;
+}
+
+.main-header-top {
+  width: 1200px;
+  height:150px;
+}
+
+.main-header-top-logo {
+  width: 150px;
+  height:150px;
+  float:left;
+}
+
+.main-header-top-heading {
+  width: 1000px;
+  height:120px;
+  padding: 30px 0 0 50px;
+  background-color: #000000; opacity: 0.8;
+  float:left;
+}
+
+.main-header-top-heading h2 {
+  color: #FFFFFF;
+  opacity: 1.0;
+}
+
+/* Home page */
+
+#page-header {
+  width: 1200px;
+  padding: 150px 0 0 40px;
+  color: white;
+  margin: 0 0 25px 0;
+}
+
+.taxonomies {
+  width: 1200px;
+  padding: 25px 0 25px 0;
+}
+
+.taxonomies div {
+  float:left;
+  padding: 15px 25px 15px 25px;
+  margin: 0 25px 0 0;
+}
+
+.taxonomies-portfolio {
+  background-color: #00aae7;
+}
+
+.taxonomies-financial-year {
+  background-color: #00ffd5;
+}
+
+.taxonomies-publication-type {
+  background-color: #cb7eff;
+}
+
+.taxonomies-audience {
+  background-color: #cccccc;
+}
+
+/* Footer */
+
+#footer {
+  height: 400px;
+  padding: 30px 0 30px 0;
+}
+
+/* -------------------------------------------------------------- */
+/* Start Components */
+/* -------------------------------------------------------------- */
+
+/* Component - Content Block */
+
+.component_content_block {
+  float:left;
+}
+
+/* Component - Formsite Form */
+
+.component_formsite_form {
+  float: left;
+}
+
+/* Component - YouTube Snippet */
+
+.component_youtube_snippet {
+  float: left;
+}
+
+/* Component - HTML Embed */
+
+.component_html_embed {
+  float: left;
+}
+
+/* Component - WYSIWYG Content Block */
+
+.component_wysiwyg_content_block {
+  float: left;
+}
+
+/* Component - Content Image */
+
+.component_content_image {
+  width: 100%;
+}
+
+.component_content_image.left img {
+  float:left;
+}
+
+.component_content_image.center {
+  text-align:center;
+}
+
+.component_content_image.right img {
+  float:right;
+}
+
+/* -------------------------------------------------------------- */
+/* End Components */
+/* -------------------------------------------------------------- */
